@@ -26,3 +26,16 @@ var equateTriangle = function(side1, side2, side3) {
 
     return result
 };
+
+$(document).ready(function() {
+  $("form#triangle").submit(function(event) {
+    var a = parseInt($("input#sideA").val());
+    var b = parseInt($("input#sideB").val());
+    var c = parseInt($("input#sideC").val());
+
+    var result = equateTriangle(a, b, c);
+    $(".whichTriangle").text(result);
+    $("#result").show();
+    event.preventDefault();
+  });
+});
