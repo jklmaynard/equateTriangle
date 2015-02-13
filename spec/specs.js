@@ -13,6 +13,6 @@ describe('equateTriangle', function () {
   });
 
   it('will return "not a triangle" when one side is greater than the sum of the other two', function () {
-    expect(equateTriangle(5, 2, 2)).to.equal("That's not a triangle!")
+    expect(equateTriangle(5, 2, 2)).to.equal("That is not a triangle!")
   });
 });
