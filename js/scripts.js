@@ -5,22 +5,22 @@ var equateTriangle = function(side1, side2, side3) {
     side1 + side2 <= side3 ||
     side1 + side3 <= side2 ||
     side2 + side3 <= side1) {
-    result = "not a triangle"
+    result = "That's not a triangle!"
 
   } else if (side1 - side2 === 0 &&
     side1 - side3 === 0 &&
     side2 - side3 === 0) {
-    result = "equalateral";
+    result = "That's an equalateral triangle!";
 
   } else if (
       side1 - side2 === 0 && side1 - side3 !== 0 ||
       side1 - side3 === 0 && side1 - side2 !== 0 ||
       side2 - side3 === 0 && side1 - side2 !== 0) {
-      result = "isoceles";
+      result = "That's an isosceles triangle!";
 
   } else if (
       side1 - side2 !== 0 && side1 - side3 !== 0 && side2 - side3 !== 0) {
-      result = "scalene";
+      result = "That's a scalene triangle!";
 
   }
 
@@ -35,6 +35,31 @@ $(document).ready(function() {
 
     var result = equateTriangle(a, b, c);
     $(".whichTriangle").text(result);
+    if (result === "That's an equalateral triangle!") {
+      $("#pictures").show()
+      $("#equalateral").show();
+      $("#isosceles").hide();
+      $("#scalene").hide();
+      $("#not-triangle").hide()
+    } else if (result === "That's an isosceles triangle!") {
+      $("#pictures").show()
+      $("#equalateral").hide();
+      $("#isosceles").show();
+      $("#scalene").hide();
+      $("#not-triangle").hide()
+    } else if (result === "That's a scalene triangle!") {
+      $("#pictures").show()
+      $("#equalateral").hide();
+      $("#isosceles").hide();
+      $("#scalene").show();
+      $("#not-triangle").hide()
+    } else if (result === "That's not a triangle!") {
+      $("#pictures").show()
+      $("#equalateral").hide();
+      $("#isosceles").hide();
+      $("#scalene").hide();
+      $("#not-triangle").show()
+    }
     $("#result").show();
     event.preventDefault();
   });
