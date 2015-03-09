@@ -37,28 +37,28 @@ $(document).ready(function() {
     $(".whichTriangle").text(result);
     if (result === "That's an equalateral triangle!") {
       $("#pictures").show()
-      $("#equalateral").show();
-      $("#isosceles").hide();
-      $("#scalene").hide();
-      $("#not-triangle").hide()
+      $(".equalateral").show();
+      $(".isosceles").hide();
+      $(".scalene").hide();
+      $(".not-triangle").hide()
     } else if (result === "That's an isosceles triangle!") {
       $("#pictures").show()
-      $("#equalateral").hide();
-      $("#isosceles").show();
-      $("#scalene").hide();
-      $("#not-triangle").hide()
+      $(".equalateral").hide();
+      $(".isosceles").show();
+      $(".scalene").hide();
+      $(".not-triangle").hide()
     } else if (result === "That's a scalene triangle!") {
       $("#pictures").show()
-      $("#equalateral").hide();
-      $("#isosceles").hide();
-      $("#scalene").show();
-      $("#not-triangle").hide()
+      $(".equalateral").hide();
+      $(".isosceles").hide();
+      $(".scalene").show();
+      $(".not-triangle").hide()
     } else if (result === "That is not a triangle!") {
       $("#pictures").show()
-      $("#equalateral").hide();
-      $("#isosceles").hide();
-      $("#scalene").hide();
-      $("#not-triangle").show()
+      $(".equalateral").hide();
+      $(".isosceles").hide();
+      $(".scalene").hide();
+      $(".not-triangle").show()
     }
     $("#result").show();
     event.preventDefault();
