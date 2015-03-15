@@ -5,4 +5,6 @@ A simple JS application that equates the sides of a triangle and determines whet
 
 The equation is neat and pretty, I think.  Easy logic, although it could be more pared down, perhaps.
 
+[View site here](http://jklmaynard.github.io/equateTriangle)
+
 License for MollyDogDigital, James Maynard (C) 2015
